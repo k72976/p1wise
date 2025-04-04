@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://King-cobra-s-workspace-eodsia.eu-central-1.xata.sh/db/p1wise",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

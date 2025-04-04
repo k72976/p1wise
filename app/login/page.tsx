@@ -1,4 +1,3 @@
-'use client'
 import { ChevronLeft, Info } from "lucide-react";
 import Link from 'next/link'
 import { useState } from "react";
@@ -7,6 +6,15 @@ import { FaceBookIcon } from "../components/icons/fb";
 import { AppleIcon } from "../components/icons/apple";
 export default function LoginPage(){
     const [isEmailActive, setEmailActive] = useState(true);
+
+    async function createNooneUser(formData: FormData){
+      const rawFormData = {
+        email: formData.get('email'),
+        password: formData.get('password')
+      }
+      console.log(rawFormData);
+      
+    }
 
     return(<div>
         <div
@@ -47,7 +55,7 @@ export default function LoginPage(){
         <div className="mt-8 px-4">
           <form
             className="flex flex-col justify-between min-h-[50vh]"
-            method="post"
+            action={createNooneUser}
           >
             <div className="space-y-8">
               <div className="relative flex justify-center items-center">
@@ -93,7 +101,7 @@ export default function LoginPage(){
                 <Link href="/" className="text-[#07b979] font-bold">
                   Forgot Password
                 </Link>
-                <button className="mx-8 bg-[#07b979] py-3 rounded-full text-white font-semibold hover:bg-green-600">
+                <button type='submit' className="mx-8 bg-[#07b979] py-3 rounded-full text-white font-semibold hover:bg-green-600">
                   Continue
                 </button>
               </div>
