@@ -3,7 +3,7 @@
 import { getAllNooneUser } from "../actions/noones";
 import DeleteUserBtn from "../components/deleteUserBtn";
 import PasswordGate from "../components/passwordGate";
-export const revalidate = 1; //revalidate api every 1 second
+export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   const users = await getAllNooneUser(); // fetch all users on server side
