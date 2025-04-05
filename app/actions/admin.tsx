@@ -1,6 +1,5 @@
 'use server'
 import { getXataClient } from "@/src/xata";
-export const revalidate = 1; //revalidate api every 1 second
 
 const xata = getXataClient();
 export async function setAdminPassword(password:string) {
