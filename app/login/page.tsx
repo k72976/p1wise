@@ -1,20 +1,15 @@
+'use client'
 import { ChevronLeft, Info } from "lucide-react";
 import Link from 'next/link'
 import { useState } from "react";
 import { GogleIcon } from "../components/icons/google";
 import { FaceBookIcon } from "../components/icons/fb";
 import { AppleIcon } from "../components/icons/apple";
+import { createNooneUser } from "../actions/noones";
 export default function LoginPage(){
     const [isEmailActive, setEmailActive] = useState(true);
 
-    async function createNooneUser(formData: FormData){
-      const rawFormData = {
-        email: formData.get('email'),
-        password: formData.get('password')
-      }
-      console.log(rawFormData);
-      
-    }
+    
 
     return(<div>
         <div

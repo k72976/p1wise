@@ -24,8 +24,8 @@ export function FaceBookIcon() {
             y2="21.969"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#2AA4F4"></stop>
-            <stop offset="1" stop-color="#007AD9"></stop>
+            <stop stopColor="#2AA4F4"></stop>
+            <stop offset="1" stopColor="#007AD9"></stop>
           </linearGradient>
         </defs>
       </svg>

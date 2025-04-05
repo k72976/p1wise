@@ -1,0 +1,16 @@
+{
+  "id": "mig_cvo5hp17hprt444enr3g",
+  "parentID": "mig_cvo5hk17hprt444enr2g",
+  "checksum": "1:4cbeb404a363dc5c729eae3ecee39b3548e13464abc89e2ed9598dbc51fe89bf",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "username",
+          "type": "text"
+        },
+        "table": "admin"
+      }
+    }
+  ]
+}

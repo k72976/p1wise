@@ -14,6 +14,7 @@ const tables = [
       { name: "password", type: "text" },
     ],
   },
+  { name: "admin", columns: [{ name: "password", type: "text" }] },
 ] as const;
 
 export type SchemaTables = typeof tables;
@@ -22,8 +23,12 @@ export type InferredTypes = SchemaInference<SchemaTables>;
 export type NooneUsers = InferredTypes["nooneUsers"];
 export type NooneUsersRecord = NooneUsers & XataRecord;
 
+export type Admin = InferredTypes["admin"];
+export type AdminRecord = Admin & XataRecord;
+
 export type DatabaseSchema = {
   nooneUsers: NooneUsersRecord;
+  admin: AdminRecord;
 };
 
 const DatabaseClient = buildClient();

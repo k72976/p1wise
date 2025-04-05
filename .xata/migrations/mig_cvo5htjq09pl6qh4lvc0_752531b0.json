@@ -1,0 +1,14 @@
+{
+  "id": "mig_cvo5htjq09pl6qh4lvc0",
+  "parentID": "mig_cvo5hp17hprt444enr3g",
+  "checksum": "1:752531b0784392641e650aeec233f7afb13364bfc15d5b8e25b440bb04ee60ec",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "password",
+        "oldName": "username",
+        "table": "admin"
+      }
+    }
+  ]
+}
