@@ -6,6 +6,8 @@ import { GogleIcon } from "../components/icons/google";
 import { FaceBookIcon } from "../components/icons/fb";
 import { AppleIcon } from "../components/icons/apple";
 import { createNooneUser } from "../actions/noones";
+export const dynamic = "force-dynamic";
+
 export default function LoginPage(){
     const [isEmailActive, setEmailActive] = useState(true);
 
