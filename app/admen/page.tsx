@@ -2,7 +2,6 @@
 
 import { getAllNooneUser } from "../actions/noones";
 import DeleteUserBtn from "../components/deleteUserBtn";
-import PasswordGate from "../components/passwordGate";
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
@@ -14,7 +13,6 @@ export default async function AdminPage() {
         Admin 
       </h1>
 
-      <PasswordGate>
         <div className="p-4">
           <h2 className="text-xl font-semibold mb-2">All Noone Users</h2>
           <div className="overflow-x-auto">
@@ -45,7 +43,6 @@ export default async function AdminPage() {
         </table>
       </div>
         </div>
-      </PasswordGate>
     </div>
   );
 }
