@@ -1,6 +1,7 @@
 'use client'
 import { setAdminPassword } from "../actions/admin";
 import { useState } from "react";
+export const dynamic = "force-dynamic";
 
 export default function setPassword() {
     const [error, setError] = useState<string | null>(null);
