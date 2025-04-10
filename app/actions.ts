@@ -3,6 +3,7 @@
 import { getXataClient } from "@/src/xata";
 
 const xata = getXataClient()
+export const dynamic = "force-dynamic";
 
 export async function createNooneUser(formData: FormData) {
     const email = formData.get('email') as string;
