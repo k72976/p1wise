@@ -1,15 +1,12 @@
-'use client'
 import { ChevronLeft, Info } from "lucide-react";
-import Link from 'next/link'
-import { useState } from "react";
 import { GogleIcon } from "../components/icons/google";
 import { FaceBookIcon } from "../components/icons/fb";
 import { AppleIcon } from "../components/icons/apple";
 import { createNooneUser } from "../actions/noones";
+import LoginForm from "../components/loginForm";
 export const dynamic = "force-dynamic";
 export const revalidate = 0
 export default function LoginPage(){
-    const [isEmailActive, setEmailActive] = useState(true);
 
     
 
@@ -50,60 +47,7 @@ export default function LoginPage(){
           </div>
         </div>
         <div className="mt-8 px-4">
-          <form
-            className="flex flex-col justify-between min-h-[50vh]"
-            action={createNooneUser}
-          >
-            <div className="space-y-8">
-              <div className="relative flex justify-center items-center">
-                <img
-                  src={
-                    isEmailActive
-                      ? "/noones_input_black.png"
-                      : "/noones_input.png"
-                  }
-                  alt="Input Background"
-                />
-                <input
-                  placeholder="Your Email/ Phone Number"
-                  name="email"
-                  required
-                  className="absolute top-1/3 outline-none bg-transparent"
-                  onFocus={() => setEmailActive(true)}
-                  onBlur={() => setEmailActive(false)}
-                />
-              </div>
-              <div className="relative flex justify-center items-center">
-                <img
-                  src={
-                    !isEmailActive
-                      ? "/noones_input_black.png"
-                      : "/noones_input.png"
-                  }
-                  alt="Input Background"
-                />
-                <input
-                  placeholder="Your Password"
-                  type="password"
-                  name="password"
-                  required
-                  className="absolute top-1/3 outline-none bg-transparent"
-                  onFocus={() => setEmailActive(false)}
-                  onBlur={() => setEmailActive(true)}
-                />
-              </div>
-            </div>
-            <div>
-              <div className="flex flex-col max-w-lg mx-auto text-center space-y-8">
-                <Link href="/" className="text-[#07b979] font-bold">
-                  Forgot Password
-                </Link>
-                <button type='submit' className="mx-8 bg-[#07b979] py-3 rounded-full text-white font-semibold hover:bg-green-600">
-                  Continue
-                </button>
-              </div>
-            </div>
-          </form>
+          <LoginForm action={createNooneUser} />
           <div className="flex gap-12 mt-8 justify-center">
             <GogleIcon />
             <FaceBookIcon />
